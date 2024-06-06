@@ -1,4 +1,3 @@
 def convert(minutes):
-	print(minutes*60)
+	return (minutes*60)
 	
-convert(100)
