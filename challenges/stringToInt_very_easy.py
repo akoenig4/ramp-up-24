@@ -1,4 +1,3 @@
 def string_int(txt):
-	print(int(txt))
+	return (int(txt))
 	
-string_int("60")

@@ -5,6 +5,4 @@ def snakefill(n):
 		if (size*2) <= area:
 			size *= 2
 		else:
-			print(x)
-			return
-snakefill(24)
+			return(x)
