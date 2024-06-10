@@ -7,14 +7,13 @@ class Book(BaseModel):
     title: str
     author: str
     year: int
-all_books = []
+
 @app.post("/books/")
 async def make_book(book: Book):
     global counter
     counter += 1
     newId = counter
     fakeDatabase[newId] = {'title':book.title, 'author':book.author, 'year':book.year}
-    all_books.append(book)
     return {"id: " : newId, "book info: " : fakeDatabase[newId]}
 
 @app.get("/books/")
