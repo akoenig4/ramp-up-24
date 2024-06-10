@@ -1,7 +1,7 @@
 import redis
 
 # Connect to Redis
-redis_client = redis.Redis(host='localhost', port=6379)
+redis_client = redis.Redis(host='new-redis-server', port=6379)
 
 pubsub = redis_client.pubsub()
 pubsub.subscribe('channel')

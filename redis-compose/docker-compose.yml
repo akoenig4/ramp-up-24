@@ -12,6 +12,7 @@ services:
       context: .
       dockerfile: Dockerfile.pub
     command: uvicorn publisher:app --host 0.0.0.0 --port 8080
+    container_name: "publisher-1"
     depends_on:
       - redis
     ports:
@@ -22,5 +23,6 @@ services:
       context: .
       dockerfile: Dockerfile.sub
     command: python subscriber.py
+    container_name: "subscriber-1"
     depends_on:
       - redis
